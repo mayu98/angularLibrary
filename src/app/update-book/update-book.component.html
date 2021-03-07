@@ -1,0 +1,29 @@
+
+<div class="container register-form">
+    <div class="form">
+        <div class="note">
+            <h1>Update Book</h1>
+        </div>
+        <br>
+  <div class="col-md-6">
+    <div class="form-group">
+        <input type="text" [(ngModel)]="bookData[0].bookId"class="form-control" placeholder="Book Id *" value="" disabled/>
+    </div>
+    <div class="form-group">
+        <input type="text" [(ngModel)]="bookData[0].bookName" class="form-control" placeholder="Book Name *" value=""/>
+    </div>
+    <div class="form-group">
+      <input type="text" [(ngModel)]="bookData[0].author" class="form-control" placeholder="Author *" value=""/>
+  </div>
+  <div class="form-group">
+    <input type="text"  [(ngModel)]="bookData[0].bookCount"class="form-control" placeholder="Book Count *" value=""/>
+</div>
+  <div class="form-group">
+    <button type="button" class="btn btn-primary btn-lg" (click)="updatebook()">Update</button> 
+    
+    
+  </div>
+  </div>
+  </div>
+  
+  </div>

@@ -1,0 +1,30 @@
+
+
+ 
+
+<div>        
+    <table  class="table table-striped" >
+      <thead>
+        <tr>
+          <th scope="col">Book Id</th>
+          <th scope="col">Book Name</th>
+          <th scope="col">Author Name</th>
+          <th scope="col">Book Count</th>
+          <th scope="col">Action</th>          
+        </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let book of Books  ">
+            <td>{{book.bookId}}</td>
+            <td>{{book.bookName}}</td>
+            <td>{{book.author}}</td>
+            <td>{{book.bookCount}}</td>                        
+            <td>
+              <button class="edit" routerLink="/adminhome/updatebook/{{book.bookId}}"> EDIT </button>
+              <button class="delete" (click)="deleteBook(book.bookId)" > Delete</button>
+            </td>
+          </tr>
+        </tbody>      
+        </table>
+        </div>
+    

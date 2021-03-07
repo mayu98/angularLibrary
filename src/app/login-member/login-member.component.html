@@ -1,0 +1,47 @@
+<br>
+<br>
+<br>
+<br>
+ 
+<div class="container Login-form">
+ 
+    <div class="form">
+        
+        <div class="note">
+            <h1>Login Here</h1>
+        </div>
+  
+        <div class="form-content">
+            <div class="row">
+                <img src="assets\mydata\login image.jpeg" class="rounded float-left" alt="login image" width=500px>
+            
+                <div class="col-md-6">
+                  <div class="form-group">
+                      <br>
+                      <br>
+                      <input type="text" class="form-control" placeholder="Member Id*" value="" [(ngModel)]="logindata.memberId"/>
+                
+                       <br>
+                       <br>
+                     <input type="text" class="form-control" placeholder="Your Password *" value="" [(ngModel)]="logindata.password"/>
+                     <br>
+                     <br>
+                     <button type="button" class="btn btn-primary btn-lg " (click)="login()">Login</button> <br>
+                     <a routerLink="/adminlogin" routerLinkActive="active" >Are you Admin click...</a>
+        
+                    </div>
+                    
+                  </div>
+                 
+            </div>
+              </div>
+        
+    </div>
+    <a routerLink="/register" routerLinkActive="active" >if not a member? Register here</a> 
+   
+  </div>
+ 
+  
+
+  <router-outlet></router-outlet>
+  

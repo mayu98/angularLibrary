@@ -1,0 +1,32 @@
+
+<h1>Welcome To Sagi rama krishnam raju Library</h1>
+
+<div *ngIf="newAddedBook.length!==0">   
+  <div *ngFor="let newBook of newAddedBook">
+    <h4> Here WE have Newly Added book</h4>
+    <h4>{{newBook.bookName}} : {{newBook.author}}</h4>
+    <h4>YOU can also see this book in below table And can Issue It ..</h4>
+
+  </div>
+</div>
+
+<div>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">Book Id</th>
+        <th scope="col">Book Name</th>
+        <th scope="col">Author Name</th>
+        <th scope="col">Book Count</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let book of AvailableBooks  ">
+        <td>{{book.bookId}}</td>
+        <td>{{book.bookName}}</td>
+        <td>{{book.author}}</td>
+        <td>{{book.bookCount}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

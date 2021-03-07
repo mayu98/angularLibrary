@@ -1,0 +1,23 @@
+<div style="align-items: center;">
+<h1>    MY Issued Books </h1>
+<br>
+
+<table  class="center" width="75%"style="border:1px solid black;margin-left:auto;margin-right:auto;">
+<table class="table  table-bordered" >
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">BOOK ID</th>
+        <th scope="col">BOOK NAME</th>
+        <th scope="col">AUTHOR</th>
+      </tr>
+    </thead>
+    <tbody>
+         <tr *ngFor="let myIssued of myIssuedBooks ">
+        <td>{{myIssued.BOOKID}}</td>
+        <td>{{myIssued.BOOKNAME}}</td>
+        <td>{{myIssued.AUTHOR}}</td>
+      </tr>
+    </tbody>
+  </table>
+</table>
+</div>

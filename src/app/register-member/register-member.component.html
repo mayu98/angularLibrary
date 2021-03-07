@@ -1,0 +1,52 @@
+
+<br>
+<br>
+<br>
+<br>
+<div class="container register-form">
+  <div class="form">
+      <div class="note">
+          <h1>Register Here</h1>
+      </div>
+      <div class="form-content">
+          <div class="row">
+            <img src="assets\mydata\login image.jpeg" class="rounded float-left" 
+            alt="login image" width=500px>
+            
+              <div class="col-md-6">
+                  <div class="form-group">
+                      <input type="text" class="form-control" placeholder="Your Name *" 
+                      value="" [(ngModel)]="memberdata.name" required/>
+                  </div>
+                  <div class="form-group">
+                      <input type="text" class="form-control"
+                       placeholder="Phone Number *" value="" 
+                       [(ngModel)]="memberdata.phoneNumber" pattern='^[0-9]{10}$'  required/>
+                  </div>
+                  <div class="form-group">
+                    <input type="text" class="form-control" 
+                    placeholder="Member Id*" value="" [(ngModel)]="memberdata.memberId" required/>
+                </div>
+                <div class="form-group">
+                    <input type="email" class="form-control" 
+                    placeholder="Email *" value="" [(ngModel)]="memberdata.email"
+                     required />
+                </div>
+                  
+                  <div class="form-group">
+                      <input type="text" class="form-control" 
+                      placeholder="Your Password *" value=""
+                       [(ngModel)]="memberdata.password" 
+                       pattern='^(?=.*[0-9])(?=.*[A-Z])(?=.*[@$!%*#?&]).{8,}$' required>
+                  </div>
+                             
+                <button type="button" class="btn btn-primary btn-lg"(click)="register()">Register</button>
+      
+                </div>
+          </div>
+        </div>
+      
+  </div>
+  <a routerLink="/login" routerLinkActive="active">if already a member? login here</a>
+          
+</div>

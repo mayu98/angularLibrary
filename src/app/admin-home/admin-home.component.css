@@ -1,0 +1,22 @@
+.note
+{
+    background-image:url("F:\angular2\LibraryManage\src\assets\mydata\adhome11.jpg");
+   width:100%;
+    text-align: center;
+    height: 200px;
+    /*background: -webkit-linear-gradient(left, #0072ff, #8811c5);*/
+   
+    color: rgba(12, 11, 11, 0.863);
+    font-weight: bold;
+    line-height: 50px;
+}
+.one{
+    height: 75px;
+    text-align: center;
+    background: -webkit-linear-gradient(left, #dee0e2, #959396);
+    color: rgb(247, 238, 238);
+    font-weight: bold;
+    line-height: 15px;
+    width: 100%;
+    font-size:120%;
+}

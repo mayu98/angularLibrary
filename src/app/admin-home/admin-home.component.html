@@ -1,0 +1,51 @@
+<div class="note">
+
+</div>
+
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+  <div class="one">
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" routerLink="/adminhome/allbooks" routerLinkActive="active">Home<span
+              class="sr-only">(current)</span> </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/adminhome/addbook" routerLinkActive="active">Add Book</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/adminhome/viewbook" routerLinkActive="active">Get a Book</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/adminhome/allissuedbooks" routerLinkActive="active">AllIssuedBooks</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/adminlogin" routerLinkActive="active">LogOut</a>
+        </li>
+
+
+      </ul>
+
+      <h5><strong>Welcome {{name}}</strong></h5>
+      &nbsp;
+      &nbsp;
+      <strong>{{date | date}}</strong>
+    </div>
+  </div>
+
+</nav>
+<br>
+<br>
+<br>
+<router-outlet></router-outlet>

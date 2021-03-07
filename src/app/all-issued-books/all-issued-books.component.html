@@ -1,0 +1,30 @@
+
+<h1> ALL ISSUED Books by Members</h1>
+<br>
+
+<div id="one">
+<div class="col-md-9" >
+    <table  class="center"  height =" 50%"width="110%"
+    style="border:1px solid black;margin-left:auto;margin-right:auto;">
+  
+    <table class="table table-striped"  >
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col"> BookID</th>
+                <th scope="col">BookName</th>
+                <th scope="col">Author</th>
+                <th scope="col">MemberID</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor=" let allissued of allissuedBooks">
+                <td><h3>{{allissued.BOOKID}}</h3></td>
+                <td><h3>{{allissued.BOOKNAME}}</h3></td>
+                <td><h3>{{allissued.AUTHOR}}</h3></td>
+                <td><h3>{{allissued.MEMBERID}}</h3></td>
+            </tr>
+        </tbody>
+    </table>
+    </table>
+</div>
+</div>

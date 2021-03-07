@@ -1,0 +1,17 @@
+#one
+{
+    background-image:url( "F:\angular2\LibraryManage\src\assets\mydata\homelogo.jpg");
+    height: 250px;
+    
+}
+
+#two
+{
+    text-align: center;
+    height: 50px;
+    background: -webkit-linear-gradient(left, #0072ff, #8811c5);
+   
+    color: #fff;
+    font-weight: bold;
+    line-height: 50px;
+}

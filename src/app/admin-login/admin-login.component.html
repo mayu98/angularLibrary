@@ -1,0 +1,46 @@
+<br>
+<br>
+<br>
+<br>
+<div class="container Login-form">
+
+  <div class="form">
+
+    <div class="note">
+      <h1>Admin Login</h1>
+    </div>
+
+    <div class="form-content">
+      <div class="row">
+        <img src="assets\mydata\adminlogin.jpg" class="rounded float-left" alt="login image" width=500px>
+
+        <div class="col-md-6">
+          <div class="form-group">
+            <br>
+            <br>               
+              <input type="text" class="form-control" placeholder="Admin Id*" value=""
+                [(ngModel)]="adminLogin.memberId" disabled />
+               
+              <br>
+              <br>
+
+              <input type="text" class="form-control" placeholder="Admin Password *" value=""
+                [(ngModel)]="adminLogin.password" />
+              <br>
+              <br>
+              <button type="button" class="btn btn-primary btn-lg " (click)="login()">Login</button>
+
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+    <a routerLink="/login" routerLinkActive="active">if not a admin login here</a>
+  </div>
+
+
+
+  <router-outlet></router-outlet>
