@@ -1,4 +1,4 @@
-<div class="container register-form">
+<div class="container ">
   <div class="form">
     <div class="note">
       <h1>View a Book</h1>
@@ -6,6 +6,7 @@
     <br>
     <div class="col-md-6">
       <div class="form-group">
+        <label><strong>ENTER BOOK ID TO SEARCH </strong></label>
         <input type="text" class="form-control" placeholder="Book Id *" value="" [(ngModel)]="searchId" />
       </div>
 
@@ -25,18 +26,18 @@
     <table class="table table-sm table-dark">
       <thead>
         <tr>
-          <th scope="col">BookID: </th>
-          <th scope="col">BookName:</th>
-          <th scope="col">Author:</th>
-          <th scope="col">BookCount:</th>
+          <th scope="col"><h3>BookID:</h3> </th>
+          <th scope="col"><h3>BookName:</h3></th>
+          <th scope="col"><h3>Author:</h3></th>
+          <th scope="col"><h3>BookCount:</h3></th>
         </tr>
       </thead>
       <tbody>
         <tr *ngFor="let bookdata of bookData">
-          <td>{{bookdata.bookId}}</td>
-          <td> {{bookdata.bookName}}</td>
-          <td> {{bookdata.author}}</td>
-          <td>{{bookdata.bookCount}}</td>
+          <td><h3>{{bookdata.bookId}}</h3></td>
+          <td><h3> {{bookdata.bookName}}</h3></td>
+          <td><h3> {{bookdata.author}} </h3></td>
+          <td><h3>bookdata.bookCount}}</h3></td>
         </tr>
       </tbody>
     </table>

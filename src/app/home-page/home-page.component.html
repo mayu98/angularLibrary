@@ -1,14 +1,6 @@
-<div class="note">
-
-  <div style="text-align:right ;">
-    <strong>{{date | date}}</strong><br>
-  </div>
-
+<div class="note">  
 </div>
-
-
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-
   <div class="one">
 
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -44,15 +36,13 @@
           <a class="nav-link" routerLink="/login" routerLinkActive="active">LogOut</a>
         </li>
       </ul>
-      <h5><strong>Welcome {{name}}</strong></h5>
+      <h5><b>Welcome {{name}}</b></h5>
       &nbsp;
       &nbsp;
-      <strong>{{date | date}}</strong>
+     <h5><b>{{date | date}}</b></h5>
     </div>
   </div>
 
 </nav>
-<br>
-<br>
-<br>
+
 <router-outlet></router-outlet>

@@ -11,30 +11,32 @@ import { RestApiMemberService } from '../shared/rest-api-member.service';
 })
 export class RegisterMemberComponent implements OnInit {
   constructor(public router: Router,
-    public mrestapi:RestApiMemberService
-    
-    ) {
-    
+    public mrestapi: RestApiMemberService
+  ) {
+
+  }
+  @Input() memberdata: any = {
+    memberId: '',
+    name: '',
+    password: '',
+    email: '',
+    phoneNumber: ''
   }
 
-  @Input() memberdata:any={
-    memberId:0,
-    name:'',
-    password:'',
-    email:'',
-    phoneNumber:''
+  ngOnInit(): void {
   }
 
- ngOnInit(): void {
- }
+  register() {
+    if (this.memberdata.memberId == 0 && this.memberdata.name == null && this.memberdata.password == null && this.memberdata.email == null && this.memberdata.phoneNumber == null) {
+      window.alert("fields should be filled ")
+    }
+    else {
 
- register()
- {
-   this.mrestapi.registerMember(this.memberdata).subscribe((data)=>
-       {
-      window.alert("Registered  go to login");     
-      this.router.navigate(['/login'])   
-       })
 
- }
+      this.mrestapi.registerMember(this.memberdata).subscribe((data) => {
+        window.alert("Registered  go to login");
+        this.router.navigate(['/login'])
+      })
+    }
+  }
 }

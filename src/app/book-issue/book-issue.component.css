@@ -1,8 +1,6 @@
 #one
 {
-    background-image:url( "F:\angular2\LibraryManage\src\assets\mydata\homelogo.jpg");
-
-    
+    background-image:url( "F:\angular2\LibraryManage\src\assets\mydata\homelogo.jpg");   
 }
 
 
@@ -33,4 +31,7 @@
     cursor: pointer;
     background: #0062cc;
     color: #fff;
+}
+.container{
+    background-color:lightblue;
 }

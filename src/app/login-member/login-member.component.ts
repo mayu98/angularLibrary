@@ -15,7 +15,7 @@ export class LoginMemberComponent implements OnInit {
 
   @Input()
   logindata: any = {
-    memberId: 0,
+    memberId: '',
     password: ''
   }
     getdata: any;

@@ -1,5 +1,5 @@
 
-<div class="container register-form">
+<div class="container ">
     <div class="form">
         <div class="note">
             <h1>My Profile</h1>
@@ -8,22 +8,27 @@
         <h4><b>{{message}}</b></h4>
   <div class="col-md-6">
     <div class="form-group">
+      <label><strong>MEMBER ID</strong></label>
         <input type="text" class="form-control" placeholder="member Id *"
          value=""[(ngModel)]="memberData[0].memberId"  disabled/>
     </div>
     <div class="form-group">
+      <label><strong>YOUR NAME</strong></label>
         <input type="text" class="form-control" placeholder="Your Name *"
          value=""[(ngModel)]="memberData[0].name" disabled />
     </div>
     <div class="form-group">
+      <label><strong>PHONE NUMBER </strong></label>
         <input type="text" class="form-control"
          placeholder="Phone Number *" [(ngModel)]="memberData[0].phoneNumber" minlength="10" maxlength="10"/>
     </div>
     <div class="form-group">
+      <label><strong>EMAIL</strong></label>
       <input type="text" class="form-control" placeholder="Member Email*" [(ngModel)]="memberData[0].email"/>
   </div>
   <div class="form-group">
-    <button type="button" class="btn btn-primary btn-lg" (click)="updateMember()">Update</button> <p>&emsp; </p>
+    <button type="button" class="btn btn-primary btn-lg" (click)="updateMember()">Update</button> 
+ &nbsp;
     <button type="button" class="btn btn-primary btn-lg" (click)="cancelMemberShip()">Cancel Membership</button>
     
   </div>

@@ -1,31 +1,31 @@
+<h1> <strong>Welcome To Sagi rama krishnam raju Library </strong></h1>
+<h3> Below  Table shows the Available book List for Issue </h3>
 
-<h1>Welcome To Sagi rama krishnam raju Library</h1>
 
-<div *ngIf="newAddedBook.length!==0">   
+<div *ngIf="newAddedBook.length!==0">
   <div *ngFor="let newBook of newAddedBook">
     <h4> Here WE have Newly Added book</h4>
     <h4>{{newBook.bookName}} : {{newBook.author}}</h4>
     <h4>YOU can also see this book in below table And can Issue It ..</h4>
-
   </div>
 </div>
-
+<br><br>
 <div>
   <table class="table table-striped">
-    <thead>
+    <thead class="thead-dark">
       <tr>
-        <th scope="col">Book Id</th>
-        <th scope="col">Book Name</th>
-        <th scope="col">Author Name</th>
-        <th scope="col">Book Count</th>
+        <th scope="col"><h3>Book Id</h3></th>
+        <th scope="col"><h3>Book Name</h3></th>
+        <th scope="col"><h3>Author Name</h3></th>
+        <th scope="col"><h3>Book Count</h3></th>
       </tr>
     </thead>
     <tbody>
       <tr *ngFor="let book of AvailableBooks  ">
-        <td>{{book.bookId}}</td>
-        <td>{{book.bookName}}</td>
-        <td>{{book.author}}</td>
-        <td>{{book.bookCount}}</td>
+        <td><h3>{{book.bookId}}</h3></td>
+        <td><h3>{{book.bookName}}</h3></td>
+        <td><h3>{{book.author}}</h3></td>
+        <td><h3>{{book.bookCount}}</h3></td>
       </tr>
     </tbody>
   </table>

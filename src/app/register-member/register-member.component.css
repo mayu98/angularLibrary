@@ -26,3 +26,14 @@
     background: #0062cc;
     color: #fff;
 }
+.one {
+    background-image:url( "F:\angular2\LibraryManage\src\assets\mydata\register1.jpg");
+   
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+    
+  }
+  .container{
+      background-color:white;
+  }

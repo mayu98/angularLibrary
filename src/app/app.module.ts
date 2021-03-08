@@ -26,6 +26,7 @@ import { ViewBookComponent } from './view-book/view-book.component';
 import { ViewAllBooksComponent } from './view-all-books/view-all-books.component';
 import { AllIssuedBooksComponent } from './all-issued-books/all-issued-books.component';
 import { MyIssuedBooksComponent } from './my-issued-books/my-issued-books.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -56,7 +57,8 @@ import { MyIssuedBooksComponent } from './my-issued-books/my-issued-books.compon
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]

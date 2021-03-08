@@ -1,52 +1,84 @@
-
-<br>
-<br>
-<br>
-<br>
-<div class="container register-form">
-  <div class="form">
+<div class="one">
+  <br>
+  <div class="container ">
+    <div class="form">
       <div class="note">
-          <h1>Register Here</h1>
+        <h1>Register Here</h1>
       </div>
       <div class="form-content">
-          <div class="row">
-            <img src="assets\mydata\login image.jpeg" class="rounded float-left" 
-            alt="login image" width=500px>
-            
-              <div class="col-md-6">
-                  <div class="form-group">
-                      <input type="text" class="form-control" placeholder="Your Name *" 
-                      value="" [(ngModel)]="memberdata.name" required/>
-                  </div>
-                  <div class="form-group">
-                      <input type="text" class="form-control"
-                       placeholder="Phone Number *" value="" 
-                       [(ngModel)]="memberdata.phoneNumber" pattern='^[0-9]{10}$'  required/>
-                  </div>
-                  <div class="form-group">
-                    <input type="text" class="form-control" 
-                    placeholder="Member Id*" value="" [(ngModel)]="memberdata.memberId" required/>
-                </div>
-                <div class="form-group">
-                    <input type="email" class="form-control" 
-                    placeholder="Email *" value="" [(ngModel)]="memberdata.email"
-                     required />
-                </div>
-                  
-                  <div class="form-group">
-                      <input type="text" class="form-control" 
-                      placeholder="Your Password *" value=""
-                       [(ngModel)]="memberdata.password" 
-                       pattern='^(?=.*[0-9])(?=.*[A-Z])(?=.*[@$!%*#?&]).{8,}$' required>
-                  </div>
-                             
-                <button type="button" class="btn btn-primary btn-lg"(click)="register()">Register</button>
-      
-                </div>
+        <div class="row">
+          <img src="assets\mydata\login image.jpeg" class="rounded float-left" alt="login image" width=500px>
+          <div class="col-md-6">
+
+            <div class="form-group">
+              <label><strong> MEMBER ID </strong></label>
+              <input type="text" required #memberId="ngModel" minlength=3
+                [class.is-invalid]=" memberId.invalid &&  memberId.touched" class="form-control" placeholder="MEMBER ID"
+                [(ngModel)]="memberdata. memberId" pattern="^[0-9]{3}$">
+              <div *ngIf=" memberId.errors && ( memberId.invalid|| memberId.touched)">
+                <small class="text-danger" *ngIf=" memberId.errors.required">Member Id is
+                  required</small>
+                <small class="text-danger" *ngIf=" memberId.errors.minlength">Member Id must
+                  be 3 numbers</small>
+                  <small class="text-danger" *ngIf="memberId.errors.pattern">Invalid  MEMBER ID </small>
+              </div>
+            </div>
+            <div class="form-group">
+              <label><strong> NAME </strong></label>
+              <input type="text" required #name="ngModel"  [class.is-invalid]="name.invalid && name.touched"
+                class="form-control" placeholder="Name" [(ngModel)]="memberdata.name"
+                  pattern="^[A-Za-z]*$">
+              <div *ngIf="name.errors && (name.invalid||name.touched)">
+                <small class="text-danger" *ngIf="name.errors.required">Name is
+                  required</small>
+                  <small class="text-danger" *ngIf="name.errors.pattern">Invalid NAME </small>
+              </div>
+            </div>
+             <div class="form-group">
+              <label><strong>PHONE NUMBER </strong></label>
+              <input class="input" id="phoneNumber" type="tel" #phoneNumber="ngModel" required
+                  minlength=10 [class.is-invalid]="phoneNumber.invalid && phoneNumber.touched"
+                  class="form-control" placeholder="Phone Number"
+                  [(ngModel)]="memberdata.phoneNumber" pattern="^[0-9]{10}$">
+              <div *ngIf="phoneNumber.errors && (phoneNumber.invalid||phoneNumber.touched)">
+                  <small class="tag" *ngIf="phoneNumber.errors.required">Phone Number is
+                      required is required</small>
+                  <small class="text-danger" *ngIf="phoneNumber.errors.minlength">Phone number must be
+                      10 Characters</small>
+                  <small class="text-danger" *ngIf="phoneNumber.errors.pattern">Invalid Phone
+                      Number</small>
+              </div>
+          </div>
+            <div class="form-group">
+              <label><strong> EMAIL</strong></label>
+              <input type="email" #email="ngModel" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" required
+                [class.is-invalid]="email.invalid && email.touched" email="email" class="form-control"
+                placeholder="Email" [(ngModel)]="memberdata.email">
+              <div *ngIf="email.errors && (email.invalid||email.touched)">
+                <small class="text-danger" *ngIf="email.errors.required">Email is
+                  required in all small case letters  </small>
+                <small class="text-danger" *ngIf="email.errors.pattern">Invalid email
+                </small>
+              </div>
+            </div>
+            <div class="form-group">
+              <label><strong> PASSWORD </strong></label>
+              <input type="password" #password="ngModel" required minlength=4
+                [class.is-invalid]="password.invalid && password.touched" 
+                class="form-control" placeholder="Password"
+                [(ngModel)]="memberdata.password" pattern="">
+              <div *ngIf="password.errors && (password.invalid||password.touched)">
+                <small class="text-danger" *ngIf="password.errors.required">password
+                  is required</small>
+                <small class="text-danger" *ngIf="password.errors.minlength">must be
+                  4 letters</small>
+              </div>
+            </div>
+            <button type="button" class="btn btn-primary btn-lg" (click)="register()">Register</button>
+            <h4><a routerLink="/login" routerLinkActive="active">if already a member? login here</a></h4>
           </div>
         </div>
-      
-  </div>
-  <a routerLink="/login" routerLinkActive="active">if already a member? login here</a>
-          
+      </div>
+    </div>
+  </div><br><br><br><br>
 </div>

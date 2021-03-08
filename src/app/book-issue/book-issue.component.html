@@ -1,9 +1,9 @@
 <div id="one">
 </div>
-<div class="container Issue-form">
+<div class="container ">
     <div class="form">
         <div class="note">
-            <h1> ISSUE A  BOOK</h1>
+            <h1> ISSUE A BOOK</h1>
         </div>
         <div class="form-content">
             <div class="row">
@@ -12,17 +12,16 @@
                       <input type="text" class="form-control" placeholder="Member Id*" value=""/>
                   </div> -->
                     <div class="form-group">
+                        <label><strong>ENTER BOOK ID TO ISSUE</strong></label>
                         <input type="text" class="form-control" placeholder="Book Id*" value=""
-                        [(ngModel)]="issueData.bookId" />
+                            [(ngModel)]="issueData.bookId" />
                     </div>
                 </div>
             </div>
             <button type="button" class="btn btn-primary btn-lg" (click)="issue()">Issue</button>
         </div>
     </div>
-
-    
-        
-      <div><h3><strong> {{message}}</strong></h3></div> 
+    <div>
+        <h3><strong> {{message}} And Return The book After 7 days </strong></h3>
+    </div>
 </div>
-

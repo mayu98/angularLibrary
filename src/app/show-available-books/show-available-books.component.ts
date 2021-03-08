@@ -21,9 +21,9 @@ export class ShowAvailableBooksComponent implements OnInit {
 
   ngOnInit(): void {    
     //this.newAddedBook =this.restapi.NewlyAddedBook;
-    //  this.restapi.getABook(this.restapi.NewlyAddedBook.bookId).subscribe((data: {}) => {
-    //  this.newAddedBook = data;
-    // })    
+     this.restapi.getABook(this.restapi.NewlyAddedBook.bookId).subscribe((data: {}) => {
+    this.newAddedBook = data;
+     })    
     this.loadBooks()
   }
 

@@ -28,3 +28,15 @@
     background: #0062cc;
     color: #fff;
 }
+.one {
+    background-image:url( "F:\angular2\LibraryManage\src\assets\mydata\background.jpg");
+   
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+    
+  }
+  .container{
+      height: auto;
+      background-color:white;
+  }
