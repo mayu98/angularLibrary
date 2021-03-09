@@ -11,7 +11,7 @@ import { AdminHomeComponent } from './admin-home/admin-home.component';
 import { AdminLoginComponent } from './admin-login/admin-login.component';
 import { BookIssueComponent } from './book-issue/book-issue.component';
 import { BookReturnComponent } from './book-return/book-return.component';
-import { BookListComponent } from './book-list/book-list.component';
+// import { BookListComponent } from './book-list/book-list.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import { LoginMemberComponent } from './login-member/login-member.component';
@@ -37,7 +37,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     AdminLoginComponent,
     BookIssueComponent,
     BookReturnComponent,
-    BookListComponent,
+    // BookListComponent,
     ContactUsComponent,
     HomePageComponent,
     LoginMemberComponent,

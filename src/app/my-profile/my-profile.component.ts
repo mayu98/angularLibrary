@@ -43,7 +43,7 @@ memberData:any=[];
   
 cancelMemberShip()
   {
-    if(confirm('Are you sure  you want to cancle your memberShip, if you cancle MemberShip then all the data related t u will be deleted. '))
+    if(confirm('Are you sure  you want to cancle your memberShip,if you cancle MemberShip then all the data related t u will be deleted. '))
     {
       this.mrestapi.cancelMembership(this.mrestapi.loggedInUser.memberId).subscribe((data)=>
       {

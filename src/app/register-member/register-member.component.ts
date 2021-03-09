@@ -23,6 +23,7 @@ export class RegisterMemberComponent implements OnInit {
     phoneNumber: ''
   }
 
+  registerData:any=[];
   ngOnInit(): void {
   }
 
@@ -31,10 +32,9 @@ export class RegisterMemberComponent implements OnInit {
       window.alert("fields should be filled ")
     }
     else {
-
-
-      this.mrestapi.registerMember(this.memberdata).subscribe((data) => {
-        window.alert("Registered  go to login");
+      this.mrestapi.registerMember(this.memberdata).subscribe((data:{}) => {
+       this.registerData=data;
+        window.alert("Registered successfully!! Remember the Password and Login with your  MemberID:"+this.registerData.memberId);
         this.router.navigate(['/login'])
       })
     }
